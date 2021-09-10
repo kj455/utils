@@ -89,7 +89,7 @@ def getGooglePhotoService():
     return service
 
 
-def get_and_download_image():
+def download_latest_image():
     service = getGooglePhotoService()
     remote_target_photo = service.mediaItems().list(pageSize=1).execute()['mediaItems'][0]
     file_path = download_file(remote_target_photo)

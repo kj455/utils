@@ -8,7 +8,7 @@ from datetime import time as tm
 import chromedriver_binary
 from selenium import webdriver
 
-from google_photo import get_and_download_image
+from google_photo import download_latest_image
 from line_notification import notify_line
 
 BASE_FORM_URL = os.getenv('TEMPERATURE_FORM_URL')
@@ -103,7 +103,7 @@ def submit_form(file_path):
 
 
 def main():
-    file_path = get_and_download_image()
+    file_path = download_latest_image()
     print('画像取得完了')
     submit_form(file_path)
     delete_file(file_path)
