@@ -18,12 +18,12 @@ xpaths = {
     'no_button': '//*[@id="idBtn_Back"]',
     'vaccine_no': '//*[@id="form-container"]/div/div/div[1]/div/div[1]/div[3]/div[2]/div[2]/div/div[2]/div/div[1]/div/label/input',
     'vaccine_submit': '//*[@id="form-container"]/div/div/div[1]/div/div[1]/div[3]/div[3]/div[1]/button',
-    'email_destination': '//*[@id="form-container"]/div/div/div[1]/div/div[1]/div[2]/div[2]/div[2]/div/div[2]/div/div[1]/div/label/input',
-    'campus': '//*[@id="form-container"]/div/div/div[1]/div/div[1]/div[2]/div[2]/div[3]/div/div[2]/div/div[1]/div/label/input',
-    'main_location': '//*[@id="form-container"]/div/div/div[1]/div/div[1]/div[2]/div[2]/div[4]/div/div[2]/div/div/input',
-    'temperature': '//*[@id="form-container"]/div/div/div[1]/div/div[1]/div[2]/div[2]/div[5]/div/div[2]/div/div[1]/div/label/input',
-    'is_positive': '//*[@id="form-container"]/div/div/div[1]/div/div[1]/div[2]/div[2]/div[6]/div/div[2]/div/div[2]/div/label/input',
-    'form_submit': '//*[@id="form-container"]/div/div/div[1]/div/div[1]/div[2]/div[3]/div[1]/button[2]',
+    'email_destination': '//*[@id="form-container"]/div/div/div[1]/div/div[1]/div[3]/div[2]/div[1]/div/div[2]/div/div[1]/div/label',
+    'campus': '//*[@id="form-container"]/div/div/div[1]/div/div[1]/div[3]/div[2]/div[2]/div/div[2]/div/div[1]/div/label',
+    'main_location': '//*[@id="form-container"]/div/div/div[1]/div/div[1]/div[3]/div[2]/div[3]/div/div[2]/div/div/input',
+    'temperature': '//*[@id="form-container"]/div/div/div[1]/div/div[1]/div[3]/div[2]/div[4]/div/div[2]/div/div[1]/div/label',
+    'is_positive': '//*[@id="form-container"]/div/div/div[1]/div/div[1]/div[3]/div[2]/div[5]/div/div[2]/div/div[2]/div/label',
+    'form_submit': '//*[@id="form-container"]/div/div/div[1]/div/div[1]/div[3]/div[3]/div[1]/button',
 }
 
 url = os.getenv('U_TOKYO_ENTRY_FORM')
@@ -51,10 +51,10 @@ try:
     click(driver, xpaths['no_button'])
     time.sleep(3)
 
-    # * ワクチン接種希望
-    click(driver, xpaths['vaccine_no'])
-    click(driver, xpaths['vaccine_submit'])
-    time.sleep(1)
+    # # * ワクチン接種希望
+    # click(driver, xpaths['vaccine_no'])
+    # click(driver, xpaths['vaccine_submit'])
+    # time.sleep(1)
 
     # * 入構フォーム
     click(driver, xpaths['email_destination'])
